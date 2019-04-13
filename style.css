@@ -1,7 +1,8 @@
-* { 
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
+  transition: all 0.5s;
 }
 
 *::after {
@@ -12,23 +13,30 @@
   box-sizing: border-box;
 }
 
+.token.selector {
+  color: #000;
+}
+
+.token.property {
+  color: #000;
+}
+
+.token.function {
+  color: #000;
+}
+
+.token.punctuation {
+  color: #000;
+}
+
 #wrapper {
   height: 100vh;
   display: grid;
-  grid-template-columns: auto;
   grid-template-rows: 50% 50%;
 }
 
-.code-wrapper {
-  grid-column: 1;
-  grid-row: 1;
-}
-
 .preview-wrapper {
-  grid-column: 1;
-  grid-row: 2;
   height: 100%;
-  border:1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,10 +46,33 @@
   width: 100%;
   height: 180px;
   position: relative;
-  }
+}
 
 .code {
   overflow: hidden;
   height: 100%;
   padding: 16px;
-} 
+}
+
+.actions {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.actions>button {
+  font-size: 16px;
+  padding: 8px 10px;
+  margin: 10px;
+  border: none;
+}
+
+.actions>button.active {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.actions>button:focus {
+  outline: none;
+}
