@@ -1,131 +1,47 @@
-* {
+* { 
   margin: 0;
   padding: 0;
   box-sizing: border-box
 }
+
 *::after {
   box-sizing: border-box;
 }
+
 *::before {
   box-sizing: border-box;
 }
 
-.preview-wrapper {
+#wrapper {
   height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 50% 50%;
+}
+
+.code-wrapper {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.preview-wrapper {
+  grid-column: 1;
+  grid-row: 2;
+  height: 100%;
+  border:1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ffe600;
 }
-.wrapper {
+
+.preview {
+  width: 100%;
   height: 180px;
-  width: 100%;
   position: relative;
-}
-.nose {
-  border-style: solid;
-  border-radius: 50%;
-  border-width: 10px 12px;
-  border-color: black transparent transparent transparent;
-  position: absolute;
-  left: 50%;
-  top: 26px;
-  margin-left: -12px;
-}
-.eye {
-  width: 49px;
-  height: 49px;
-  background: #2E2E2E;
-  border-radius: 50%;
-  border: 2px solid #000000;
-  position: absolute;
-}
-.eye.left {
-  left: 50%;
-  margin-left: -114px;
-}
-.eye.right {
-  right: 50%;
-  margin-right: -114px;
-}
-.eye::before {
-  content: '';
-  display: block;
-  width: 21px;
-  height: 21px;
-  background: #FFFFFF;
-  border-radius: 50%;
-  border: 2px solid #000000;
-  position: absolute;
-  left: 6px;
-  top: 2px;
-}
-.face {
-  width: 67px;
-  height: 67px;
-  background: #FF0000;
-  border-radius: 50%;
-  border: 2px solid #000000;
-  position: absolute;
-}
-.face.left {
-  left: 50%;
-  margin-left: -160px;
-  top: 83px;
-}
-.face.right {
-  right: 50%;
-  margin-right: -160px;
-  top: 83px;
-}
-.upperLip {
-  width: 65px;
-  height: 25px;
-  border: 2px solid black;
-  border-top: none;
-  transform: rotate(-26deg);
-  position: absolute;
-  margin-top: 38px;
-  background: #ffe600;
-}
-.upperLip.left {
-  border-bottom-left-radius: 40px 25px;
-  border-right: none;
-  right: 50%;
-}
-.upperLip.right {
-  border-bottom-right-radius: 40px 25px;
-  border-left: none;
-  transform: rotate(25deg);
-  left: 50%;
-}
-.wrapper-Lowerlip {
-  width: 100%;
-  height: 132px;
-  position: absolute;
-  bottom: 0;
+  }
+
+.code {
   overflow: hidden;
-  left: 50%;
-  margin-left: -100px;
-}
-.lowerLip {
-  width: 200px;
-  height: 2000px;
-  background: #9B000A;
-  border-radius: 100px/800px;
-  border: 2px solid black;
-  position: absolute;
-  bottom: 0;
-  overflow: hidden;
-}
-.lowerLip::after {
-  content: '';
-  position: absolute;
-  right: 50%;
-  margin-right: -66px;
-  bottom: -25px;
-  width: 132px;
-  height: 132px;
-  background: #ff485f;
-  border-radius: 50%;
+  height: 100%;
+  padding: 16px;
 } 
