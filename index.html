@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>动态展示纯CSS画皮卡丘</title>
-  <style id=styleTag></style>
+  <title>动画展示纯 CSS 画皮卡丘</title>
+  <link rel="stylesheet" href="./vendor/prism/prism.css">
   <link rel="stylesheet" href="./style.css">
+  <style id=styleTag></style>
 </head>
 
 <body>
@@ -29,9 +30,17 @@
         <div class="upperLip right"></div>
       </div>
     </div>
+  </div>
+  <div class="actions">
+    <button data-speed="slow">慢速</button>
+    <button data-speed="normal" class="active">中速</button>
+    <button data-speed="fast">快速</button>
+  </div>
+  
+  <script src="./vendor/jquery.min.js"></script>
+  <script src="./main.js"></script>
+  <script src="./vendor/prism/prism.js"></script>
+  
 </body>
-
-<script src="./vender/jquery.min.js"></script>
-<script src="./main.js"></script>
 
 </html>
